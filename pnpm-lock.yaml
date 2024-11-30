@@ -9,13 +9,13 @@ importers:
   .:
     dependencies:
       '@clack/prompts':
-        specifier: ^0.8.1
+        specifier: ^0.8.2
         version: 0.8.2
       '@floating-ui/dom':
         specifier: ^1.6.12
         version: 1.6.12
       '@myriaddreamin/rehype-typst':
-        specifier: ^0.5.0-rc7
+        specifier: ^0.5.0-rc9
         version: 0.5.0-rc9
       '@napi-rs/simple-git':
         specifier: 0.1.19
@@ -69,7 +69,7 @@ importers:
         specifier: ^4.1.0
         version: 4.1.0
       lightningcss:
-        specifier: ^1.28.1
+        specifier: ^1.28.2
         version: 1.28.2
       mdast-util-find-and-replace:
         specifier: ^3.0.1
@@ -81,16 +81,16 @@ importers:
         specifier: ^4.0.0
         version: 4.0.0
       mermaid:
-        specifier: ^11.4.0
+        specifier: ^11.4.1
         version: 11.4.1
       micromorph:
         specifier: ^0.4.5
         version: 0.4.5
       pixi.js:
-        specifier: ^8.5.2
+        specifier: ^8.6.2
         version: 8.6.2
       preact:
-        specifier: ^10.24.3
+        specifier: ^10.25.0
         version: 10.25.0
       preact-render-to-string:
         specifier: ^6.5.11
@@ -156,8 +156,8 @@ importers:
         specifier: ^6.0.1
         version: 6.0.1
       satori:
-        specifier: ^0.11.3
-        version: 0.11.3
+        specifier: ^0.12.0
+        version: 0.12.0
       serve-handler:
         specifier: ^6.1.6
         version: 6.1.6
@@ -165,7 +165,7 @@ importers:
         specifier: ^0.33.5
         version: 0.33.5
       shiki:
-        specifier: ^1.23.1
+        specifier: ^1.24.0
         version: 1.24.0
       source-map-support:
         specifier: ^0.5.21
@@ -208,7 +208,7 @@ importers:
         specifier: ^4.0.9
         version: 4.0.9
       '@types/node':
-        specifier: ^22.9.0
+        specifier: ^22.10.1
         version: 22.10.1
       '@types/pretty-time':
         specifier: ^1.1.5
@@ -226,13 +226,13 @@ importers:
         specifier: ^0.24.0
         version: 0.24.0
       prettier:
-        specifier: ^3.3.3
+        specifier: ^3.4.1
         version: 3.4.1
       tsx:
         specifier: ^4.19.2
         version: 4.19.2
       typescript:
-        specifier: ^5.6.3
+        specifier: ^5.7.2
         version: 5.7.2
 
 packages:
@@ -2640,8 +2640,8 @@ packages:
     engines: {node: '>=14.0.0'}
     hasBin: true
 
-  satori@0.11.3:
-    resolution: {integrity: sha512-Wg7sls0iYAEETzi9YYcY16QVIqXjZT06XjkwondC5CGhw1mhmgKBCub8cCmkxdl/naXXQD+m29CFgn8pwtYCnA==}
+  satori@0.12.0:
+    resolution: {integrity: sha512-e0e+qQyeFwEszujN7SpWpRtZgww7Nh8lSO3bUn2spHZ5JpqEl3zJ3P14/JlWruxEwdgREs35ZnavrPrWaRVFDg==}
     engines: {node: '>=16'}
 
   saxes@6.0.0:
@@ -5635,7 +5635,7 @@ snapshots:
     optionalDependencies:
       '@parcel/watcher': 2.5.0
 
-  satori@0.11.3:
+  satori@0.12.0:
     dependencies:
       '@shuding/opentype.js': 1.4.0-beta.0
       css-background-parser: 0.1.0
