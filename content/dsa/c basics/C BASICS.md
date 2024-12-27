@@ -14,26 +14,29 @@ int main(){
 
 ```
 Alternatively `getchar` can also be used to get one single character from user but this is not recommended due to security vulnerabilities.
+
 ![[Pasted image 20241227171526.png]]
 
-| Format specifier | Data type             |
-| ---------------- | --------------------- |
-| %d               | int                   |
-| %ld              | long                  |
-| %lld             | long long             |
-| %lf              | double                |
-| %Lf              | long double           |
-| %f               | float                 |
-| %c               | char                  |
-| %s               | string(array of char) |
-| %hi              | short                 |
-| %hu              | unsigned short        |
-| %p               | pointer               |
-| %u               | unsigned int          |
-| %o               | octal                 |
-| %x               | hexadecimal           |
+| Format specifier | Data type                  |
+| ---------------- | -------------------------- |
+| %d               | int                        |
+| %ld              | long                       |
+| %lld             | long long                  |
+| %lf              | double                     |
+| %Lf              | long double                |
+| %f               | float                      |
+| %c               | char                       |
+| %s               | string(array of char)      |
+| %hi              | short                      |
+| %hu              | unsigned short             |
+| %p               | pointer(or memory address) |
+| %u               | unsigned int               |
+| %o               | octal                      |
+| %x               | hexadecimal                |
 "%.2f"  is used to print float numbers up to 2 decimal places.
-"%6d" means increased width for integer.![[Pasted image 20241227164919.png]]
+"%6d" means increased width for integer.
+
+![[Pasted image 20241227164919.png]]
 
 ### Macros
 
@@ -63,7 +66,7 @@ int main() {
 }
 ```
 
-Can also chain macros, one macro calling another macro is valid.
+Can also chain macros, one macro calling another macro is valid
 ##### Multi line macro
 
 ```
@@ -76,6 +79,45 @@ int main() {
 	...
 	return 0;
 }
+```
+
+##### Pre defined Macros
+`__FILE__` - Current file name
+`__LINE__` - Current line number
+`__DATE__` - Compilation date (as string)
+`__TIME__` - Compilation time (as string)
+
+### Preprocessor Directives
+
+##### 1. `ifdef` and `ifndef`
+Used to include a section of code if a certain macro is defined or not defined.
+Syntax:
+```
+#define DEBUG 1
+#ifdef DEBUG
+	printf("DEBUG mode is enabled");
+#endif
+#ifndef DEBUG
+	printf("DEBUG mode is not enabled");
+#endif
+```
+(`endif` is used to signify ending of `ifdef` `ifndef` blocks)
+##### 2.  `if`,  `elif` and `else`
+Same as if elif else from main program.
+```
+#if macro_condition  
+   statements  
+#elif macro_condition  
+   statements  
+#else
+   statements  
+#endif
+```
+##### 3. `error`
+`error`  is used to abort compilation process and throw error.
+```
+#ifndef SOMEMACRO
+	#error SOMEMACRO not found!
 ```
 
 ### Compilation steps
@@ -148,4 +190,38 @@ When comparing unsigned int with signed, the signed int is automatically convert
 | \t       | Tab space              |
 | \\"      | To print double quotes |
 | \\'      | To print single quotes |
+
+### Switch statement
+`switch` is used to execute one condition from multiple conditions.
+```
+int var = 1;
+switch(var) {
+	case 1:
+		printf("Var is 1");
+		break;
+	case 2:
+		printf("Value of var is 2");
+		break;
+	default:
+		printf("Value of var is unknown");
+		break;
+}
+```
+### Pointers
+A pointer (\*) provides a reference to an entity of the referenced type. Also used as indirection or dereferencing operator.
+```
+int a=17;
+int *p_a=&a //returns the memory address of variable a
+```
+Use `*` again on a pointer to get the value.
+```
+int value=*p_a;
+```
+Use `&` to turn value into pointer(by getting memory address)
+Pointers can be used to reference arrays too. By default zeroth index is returned.
+```
+int a[10];
+int i=*a; //value of 0th element in a
+int j=*(a+1) //value of 2nd elmeent in a
+```
 
